@@ -1,0 +1,4 @@
+sudo apt install swig
+swig -java -package ua.com.kl.cmathtutor.mo Math.i
+gcc -c -fPIC Math.c Math_wrap.c -m64 -I/usr/lib/jvm/java-11-openjdk-amd64/include -I/usr/lib/jvm/java-11-openjdk-amd64/include/linux
+gcc -shared Math.o Math_wrap.o -m64 -o libMath.so

@@ -9,7 +9,6 @@ import org.junit.jupiter.params.provider.CsvSource;
 class MathTest {
     @BeforeAll
     static void loadLibrary() {
-	System.out.println(System.getProperty("java.library.path"));
 	System.loadLibrary("Math");
     }
 

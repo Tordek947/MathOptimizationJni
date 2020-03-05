@@ -33,10 +33,10 @@ public class NativeLoader {
 	    name = library + ".dll";
 	    switch (osArch) {
 	    case "x86":
-		path = "win-x86";
+		path = "win-x86/";
 		break;
 	    case "amd64":
-		path = "win-x86_64";
+		path = "win-x86_64/";
 		break;
 	    default:
 		throw new UnsupportedOperationException("Platform " + osName + ":" + osArch + " not supported");
@@ -56,7 +56,7 @@ public class NativeLoader {
 	    throw new UnsupportedOperationException("Platform " + osName + ":" + osArch + " not supported");
 	}
 
-	return includePath ? path + "/" + name : name;
+	return includePath ? path + name : name;
     }
 
     private String saveLibrary(String library) throws IOException {

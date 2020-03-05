@@ -43,6 +43,18 @@
 				<test.java-lib-folder>win-x86_64</test.java-lib-folder>
 			</properties>
 		</profile>
+		<profile>
+			<id>linux64-test</id>
+			<activation>
+				<os>
+					<family>linux</family>
+					<arch>amd64</arch>
+				</os>
+			</activation>
+			<properties>
+				<test.java-lib-folder>linux-x86_64</test.java-lib-folder>
+			</properties>
+		</profile>
 	</profiles>
 
 	<build>
