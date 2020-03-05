@@ -1,0 +1,13 @@
+//Math.i
+//Math.c
+swig -java -package ua.com.kl.cmathtutor.mo Math.i
+gcc -c Math.c Math_wrap.c -m64 -fPIC -I../include -I../include/win32
+gcc -shared Math.o Math_wrap.o -m64 -Wl,--add-stdcall-alias -o Math.dll
+
+Contain of Main.java:
+System.loadLibrary("Math");
+System.out.println(Math.fact(5));
+
+//Main.java
+javac Main.java
+java Main
